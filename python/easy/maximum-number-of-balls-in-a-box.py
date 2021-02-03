@@ -1,4 +1,4 @@
-# question can be found on leetcode.com/problems/maximum-number-of-balls-in-a-box
+# question can be found on leetcode.com/problems/maximum-number-of-balls-in-a-box/
 
 
 class Solution:
