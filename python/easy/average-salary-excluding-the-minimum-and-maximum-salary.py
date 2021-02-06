@@ -1,4 +1,7 @@
 # average-salary-excluding-the-minimum-and-maximum-salary
+from typing import List
+
+
 class Solution:
     def average(self, salary: List[int]) -> float:
         lo = 1e6
@@ -8,7 +11,7 @@ class Solution:
             if num > hi:
                 hi = num
             if lo > num:
-                lo == num
+                lo = num
 
             total += num
 
