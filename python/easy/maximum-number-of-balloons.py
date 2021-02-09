@@ -1,4 +1,4 @@
-# question can be found on leetcode.com/problems/maximum-number-of-balloons
+# question can be found on leetcode.com/problems/maximum-number-of-balloons/
 
 
 class Solution:
