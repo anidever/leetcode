@@ -4,8 +4,7 @@ from typing import List
 class Solution:
     def islandPerimeter(self, grid: List[List[int]]) -> int:
         seen = set()
-        rows = len(grid)
-        cols = len(grid[0])
+        rows, cols = len(grid), len(grid[0])
         perimeter = 0
 
         def dfs(row, col):
