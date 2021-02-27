@@ -6,9 +6,12 @@ class Solution:
         def isValid(row, col):
             return cols > col >= 0 and rows > row >= 0 and grid[row][col]
 
+        def visit(row, col):
+            grid[row][col] = 0
+
         def dfs(row, col):
             area = 1
-            grid[row][col] = 0
+            visit(row, col)
             for row, col in (
                 (row - 1, col),
                 (row + 1, col),
@@ -16,14 +19,14 @@ class Solution:
                 (row, col + 1),
             ):
                 if isValid(row, col):
-                    grid[row][col] = 0
+                    visit(row, col)
                     area += dfs(row, col)
 
             return area
 
         def bfs(row, col):
             area = 1
-            grid[row][col] = 0
+            visit(row, col)
             queue = [(row, col)]
             while queue:
                 row, col = queue.pop(0)
@@ -35,7 +38,7 @@ class Solution:
                 ):
                     if isValid(row, col):
                         area += 1
-                        grid[row][col] = 0
+                        visit(row, col)
                         queue.append((row, col))
             return area
 
