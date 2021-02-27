@@ -19,7 +19,6 @@ class Solution:
                 (row, col + 1),
             ):
                 if isValid(row, col):
-                    visit(row, col)
                     area += dfs(row, col)
 
             return area
