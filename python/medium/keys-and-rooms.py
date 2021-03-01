@@ -1,4 +1,4 @@
-# question can be found at https://leetcode.com/problems/keys-and-rooms/
+# question can be found at leetcode.com/problems/keys-and-rooms/
 from typing import List
 
 
