@@ -10,7 +10,7 @@ class Solution:
             if char in opens:
                 stack.append(char)
             else:
-                if len(stack) > 0:
+                if stack:
                     last_char = stack.pop()
                     if hashmap[last_char] != char:
                         return False
