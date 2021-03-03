@@ -1,6 +1,6 @@
 # question can be found on leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/
-# the solution is above is elegant and well thought out
-# the solution is my hack to append 0 where necessary,
+# the solution above is elegant
+# the solution below is my hack to append 0 where necessary,
 # question doesn't ask a set to be returned anyways :lel:
 from Typing import List
 
