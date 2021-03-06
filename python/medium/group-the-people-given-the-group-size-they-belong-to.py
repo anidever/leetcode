@@ -24,5 +24,4 @@ class Solution:
         # return [
         #     hashmap[i][j : j + i] for i in hashmap for j in range(0, len(hashmap[i]), i)
         # ]
-        # I commented out the above line, I think it's mor elegant but hard to
-        # read and maybe reason about
+        # I commented out the above line, I think it's more elegant but hard to read

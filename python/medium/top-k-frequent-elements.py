@@ -11,13 +11,13 @@ class Solution:
             else:
                 lookup[num] = 1
 
-        res = []
+        result = []
         for i in range(k):
             maks = max(lookup, key=lookup.get)
-            res.append(maks)
+            result.append(maks)
             lookup.pop(maks)
 
-        return res
+        return result
 
         # I am trying not to use given methods, but ..
         from collections import Counter
