@@ -11,8 +11,7 @@ class Solution:
                     num += 1
         return num
 
-    def countNegatives(self, grid: List[List[int]]) -> int:
-        num = 0
+        # List comprehension
         for array in grid:
             num += len([item for item in array if item < 0])
         return num
