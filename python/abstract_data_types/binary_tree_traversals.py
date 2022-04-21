@@ -3,11 +3,11 @@
 # Inorder left-root-right
 # Postorder left-right-root
 from typing import Optional, List
-from abstract_data_types.binary_tree import Node
+from abstract_data_types.binary_tree import TreeNode
 
 
 # Recursive solutions
-def inOrderRecursive(root: Optional[Node]) -> List[int]:
+def inOrderRecursive(root: Optional[TreeNode]) -> List[int]:
     result = []
 
     def traverse(node):
@@ -23,7 +23,7 @@ def inOrderRecursive(root: Optional[Node]) -> List[int]:
     return result
 
 
-def postOrderRecursive(root: Optional[Node]) -> List[int]:
+def postOrderRecursive(root: Optional[TreeNode]) -> List[int]:
     result = []
 
     def traverse(node):
@@ -39,7 +39,7 @@ def postOrderRecursive(root: Optional[Node]) -> List[int]:
     return result
 
 
-def preOrderRecursive(root: Optional[Node]) -> List[int]:
+def preOrderRecursive(root: Optional[TreeNode]) -> List[int]:
     result = []
 
     def traverse(node):
@@ -55,10 +55,10 @@ def preOrderRecursive(root: Optional[Node]) -> List[int]:
     return result
 
 
-def levelOrderRecursive(root: Optional[Node]) -> List[List[int]]:
+def levelOrderRecursive(root: Optional[TreeNode]) -> List[List[int]]:
     result = {}
 
-    def traverse(node: Optional[Node], level: int):
+    def traverse(node: Optional[TreeNode], level: int):
         if node:
             if level not in result:
                 result[level] = []
@@ -72,7 +72,7 @@ def levelOrderRecursive(root: Optional[Node]) -> List[List[int]]:
 
 
 # Iterative solutions
-def inOrderIterative(root: Optional[Node]) -> List[int]:
+def inOrderIterative(root: Optional[TreeNode]) -> List[int]:
     result = []
     stack = []
     current = root
@@ -89,7 +89,7 @@ def inOrderIterative(root: Optional[Node]) -> List[int]:
     return result
 
 
-def postOrderIterative(root: Optional[Node]) -> List[int]:
+def postOrderIterative(root: Optional[TreeNode]) -> List[int]:
     result = []
     stack = [root]
     current = root
@@ -104,7 +104,7 @@ def postOrderIterative(root: Optional[Node]) -> List[int]:
     return result
 
 
-def preOrderIterative(root: Optional[Node]) -> List[int]:
+def preOrderIterative(root: Optional[TreeNode]) -> List[int]:
     result = []
     stack = []
     current = root
@@ -121,7 +121,7 @@ def preOrderIterative(root: Optional[Node]) -> List[int]:
     return result
 
 
-def levelOrderIterative(root: Optional[Node]) -> List[List[int]]:
+def levelOrderIterative(root: Optional[TreeNode]) -> List[List[int]]:
     result = []
     if not root:
         return result
