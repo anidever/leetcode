@@ -55,6 +55,22 @@ def preOrderRecursive(root: Optional[Node]) -> List[int]:
     return result
 
 
+def levelOrderRecursive(root: Optional[Node]) -> List[List[int]]:
+    result = {}
+
+    def traverse(node: Optional[Node], level: int):
+        if node:
+            if level not in result:
+                result[level] = []
+
+            result[level].append(node.val)
+            traverse(node.left, level+1)
+            traverse(node.right, level+1)
+
+    traverse(root, 0)
+    return list(result.values())
+
+
 # Iterative solutions
 def inOrderIterative(root: Optional[Node]) -> List[int]:
     result = []
@@ -101,5 +117,27 @@ def preOrderIterative(root: Optional[Node]) -> List[int]:
 
         current = stack.pop()
         current = current.right
+
+    return result
+
+
+def levelOrderIterative(root: Optional[Node]) -> List[List[int]]:
+    result = []
+    if not root:
+        return result
+
+    queue = [root]
+    while queue:
+        size = len(queue)
+        current_level = []
+        for _ in size:
+            current_node = queue.pop(0)
+            current_level.append(current_node)
+            if current_node.left:
+                queue.append(current_node.left)
+            if current_node.right:
+                queue.append(current_node.right)
+
+        result.append(current_level)
 
     return result
