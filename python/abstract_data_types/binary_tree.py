@@ -1,4 +1,4 @@
-class Node:
+class TreeNode:
     def __init__(self, value=None):
         self.value = value
         self.left = None
@@ -7,7 +7,7 @@ class Node:
 
 class BinaryTree:
     def __init__(self, head):
-        self.head = Node(head)
+        self.head = TreeNode(head)
 
     def depth(self):
         if not self.head:
@@ -35,7 +35,7 @@ class BinaryTree:
 
     def append(self, value):
         if not self.head:
-            self.head = Node(value)
+            self.head = TreeNode(value)
         else:
             self._append(self.head, value)
 
@@ -44,9 +44,9 @@ class BinaryTree:
             if current_node.left:
                 self._append(value, current_node.left)
             else:
-                current_node.left = Node(value)
+                current_node.left = TreeNode(value)
         elif value > current_node.value:
             if current_node.right:
                 self._append(value, current_node.right)
             else:
-                current_node.right = Node(value)
+                current_node.right = TreeNode(value)

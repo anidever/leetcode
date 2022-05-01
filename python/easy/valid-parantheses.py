@@ -4,10 +4,9 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        opens = "({["
         hashmap = {"(": ")", "{": "}", "[": "]"}
         for char in s:
-            if char in opens:
+            if char in hashmap:
                 stack.append(char)
             else:
                 if stack:
