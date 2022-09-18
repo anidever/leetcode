@@ -1,16 +1,14 @@
-"""
 # Definition for Employee.
 class Employee:
     def __init__(self, id: int, importance: int, subordinates: List[int]):
         self.id = id
         self.importance = importance
         self.subordinates = subordinates
-"""
 from typing import List
 
 
 class Solution:
-    def getImportance(self, employees: List["Employee"], id: int) -> int:
+    def getImportance(self, employees: List[Employee], id: int) -> int:
         id_pool = [id]
         ctr = 0
         employees = {emp.id: emp for emp in employees}
