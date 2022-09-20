@@ -130,7 +130,7 @@ def levelOrderIterative(root: Optional[TreeNode]) -> List[List[int]]:
     while queue:
         size = len(queue)
         current_level = []
-        for _ in size:
+        for _ in range(size):
             current_node = queue.pop(0)
             current_level.append(current_node)
             if current_node.left:
