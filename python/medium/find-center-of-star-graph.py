@@ -1,6 +1,8 @@
 # question can be found at leetcode.com/problems/find-center-of-star-graph
+from typing import List
 
-class Solution(self, edges: List[List[int]]]) -> int:
+
+class Solution(self, edges: List[List[int]]) -> int:
     seen = set()
     # flattening is not really necessary but you know ..
     flattened = [item for sublist in edges for item in sublist]

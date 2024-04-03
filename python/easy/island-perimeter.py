@@ -30,7 +30,7 @@ class Solution:
 
         return perimeter
 
-        ## Alternative I liked
+        # Alternative I liked
         for row in range(rows):
             for col in range(cols):
                 if grid[row][col]:
