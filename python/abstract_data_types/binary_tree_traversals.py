@@ -92,7 +92,6 @@ def inOrderIterative(root: Optional[TreeNode]) -> List[int]:
 def postOrderIterative(root: Optional[TreeNode]) -> List[int]:
     result = []
     stack = [root]
-    current = root
 
     while stack:
         current = stack.pop()

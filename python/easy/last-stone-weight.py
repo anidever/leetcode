@@ -1,3 +1,4 @@
+import heapq
 from typing import List
 
 
@@ -10,3 +11,20 @@ class Solution:
             stones.sort(reverse=True)
 
         return stones[0]
+
+
+class Solution:
+    def lastStoneWeight(self, stones: List[int]) -> int:
+
+        heap = []
+
+        for stone in stones:
+            heapq.heappush(heap, -stone)
+
+        while len(heap) >= 2:
+            first = heapq.heappop(heap)
+            second = heapq.heappop(heap)
+            diff = abs(first - second)
+            heapq.heappush(heap, -diff)
+
+        return -1 * heap[0]
